@@ -1,0 +1,367 @@
+/*
+*,
+*:before,
+*:after {
+  outline: solid 1px red;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: black;
+  font-weight: 900;
+  src: url("../fonts/Nunito-Black.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/Nunito-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: Medium;
+  font-weight: 500;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: Regular;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: SemiBold;
+  font-weight: 600;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+
+  
+ body {
+  max-width: 1900px;
+  height: 100%;
+  margin: 0 auto;
+  color:black;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+ }
+
+ .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  background-color: rgba(0, 145, 138, 0.9);
+  position: fixed;
+  left: 50%;
+  margin-left: -600px;
+  padding: 10px 50px;
+  z-index: 2;
+ }
+
+ address {
+  color: white;
+  font: 400 15px/30px Montserrat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+ }
+  
+ .logo span {
+  color: white;
+  font: 900 66px/66px Nunito;
+ }
+
+.tel,
+.mail {
+  color: white;
+  text-decoration: none;
+}
+
+.tel:hover,
+.mail:hover {
+  text-decoration: underline;
+}
+
+.hiro {
+  background-color: #00918a;
+  background-image: url(../images/masterlubric.jpg);
+  background-position: right;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 750px;
+}
+
+.hiro h1 {
+  color: white;
+  font: 100 35px/50px Montserrat;
+  padding: 111px 0 50px 50px;
+}
+
+header {
+
+}
+
+ h1 {
+  width: 1200px;
+  margin: 0 auto;
+ }
+
+ .main {
+  width: 1200px;
+  margin: 0 auto;
+ }
+
+ .section {
+  margin: 40px 0;
+}
+
+.section:nth-child(1) .section-description-wrap {
+  background-image: url(../images/1.jpg);
+}
+
+.section:nth-child(2) .section-description-wrap {
+  background-image: url(../images/2.jpg);
+}
+
+.section:nth-child(3) .section-description-wrap {
+  background-image: url(../images/3.jpg);
+}
+
+.section:nth-child(4) .section-description-wrap {
+  background-image: url(../images/4.jpg);
+}
+
+.section:nth-child(5) .section-description-wrap {
+  background-image: url(../images/5.jpg);
+}
+
+.section:nth-child(6) .section-description-wrap {
+  background-image: url(../images/6.jpg);
+}
+
+.section:nth-child(7) .section-description-wrap {
+  background-image: url(../images/7.jpg);
+}
+
+.section:nth-child(8) .section-description-wrap {
+  background-image: url(../images/8.jpg);
+}
+
+ .section-description-wrap {
+  padding: 310px 0 0;
+  display: block;
+  background-size: cover;
+  background-position: center;
+ }
+
+ .section-description {
+  font: 430 46px/57px Montserrat;
+  padding-top: 200px;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #00918a;
+  margin: 0;
+  padding: 200px 0 10px;
+  display: inline;
+  display: inline;
+  background-color: rgb(255 255 255 / 80%);
+  padding: 0;
+ }
+
+ .product-wrap {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+position: relative;
+ }
+
+ details {
+  height: fit-content;
+  max-height: 197px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: solid 2px rgb(255, 255, 255);
+ }
+
+ details[open] {
+  grid-column: 1 / -1;
+  height: 100%;
+  max-height: 100%;
+ }
+
+ details[open] h3 {
+  background-color: #00918a;
+  color: white;
+ }
+
+ .grease-title {
+  display: block;
+  color: #000000;
+  font: 500 18px/27px Montserrat;
+  margin-bottom: 20px;
+  padding: 0 10px;
+ }
+
+ details:hover {
+  border: solid 2px rgb(0, 145, 138);
+ }
+
+ .grease-title h3 {
+  background-color: rgb(0, 145, 138);
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 10px;
+  font: 600 18px / 28px Montserrat;
+  margin: 0 -10px;
+  margin-bottom: 20px;
+  border-bottom: solid 2px rgb(183, 221, 215);
+ }
+
+ .grease-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: block;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 55%);
+ }
+
+ details[open] .grease-title::after {
+  content: "";
+  background: none;
+  z-index: -1;
+ }
+
+ .grease-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+ }
+
+/*  СПИСК ПРЕИМУЩЕСТВА  */
+
+
+ .advantages {
+  flex: 1;
+  cursor: default;
+ }
+
+ .advantages-list {
+margin: 0;
+padding: 0;
+list-style: none;
+ }
+
+.advantages-list li{
+  padding:6px;
+}
+.advantages-list li:before {
+  padding-right:10px;
+  font-weight: bold;
+  color: rgb(183, 221, 215);
+  content: "\2714";
+  transition-duration: 0.5s;
+}
+.advantages-list li:hover:before {
+  color: #00918a;
+  } 
+
+ .grease-description table {
+flex: 2;
+ }
+
+
+ .advantages span {
+  color: #00918a;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 0;
+  display: block;
+ }
+
+ .use span {
+  color: #00918a;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 0;
+  display: block;
+ }
+
+/*  ТАБЛИЦЫ  */
+
+table {
+  font-family: "Montserrat", "Lucida Grande", Sans-Serif;
+  border-collapse: collapse;
+  color: #000000;
+  cursor: default;
+}
+
+caption {
+  padding: 10px;
+  color: #00918a;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+th {
+  border-bottom: 3px solid #00918a;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(183, 221, 215);
+}
+
+tbody tr:hover {
+  background: #00918a;
+    color: #fff;
+}
+
+/*  ТАБЛИЦЫ КОНЕЦ  */
+
+ .use {
+  width: 100%;
+  cursor: default;
+ }
+
+ .use p {
+  margin: 0;
+ }
+
+ /*  ФУТЕР  */
+
+ footer {
+  background-color: #00918a;
+  height: 100px;  
+ }
