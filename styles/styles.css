@@ -49,7 +49,13 @@
   font-display: swap;
 }
 
-  
+ html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 300px;
+  overflow-y: scroll;
+ } 
+
+
  body {
   max-width: 1900px;
   height: 100%;
@@ -59,32 +65,133 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
- }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+   }
 
- .logo {
+ .hidden {
+  display: none;
+}
+
+
+/*  ХЕДЕР  */
+
+ header {
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+ .header-fix {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
   background-color: rgba(0, 145, 138, 0.9);
-  position: fixed;
-  left: 50%;
-  margin-left: -600px;
-  padding: 10px 50px;
-  z-index: 2;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1380px;
+  width: 100%;
+ }
+  
+ .logo {
+  color: white;
+  font: 900 56px/66px Nunito;
+  text-decoration: none;
  }
 
- address {
+ .navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.catalog-wrapper {
+
+}
+
+.navigation-item {
+  font: 400 15px/30px Montserrat;
+  background-color: transparent;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+  border: solid 1px #00918a00;
+  cursor: pointer;
+}
+
+.catalog-item {
+  list-style-type: none;
+  margin-bottom: 20px;
+  font: 400 13px/30px Montserrat;
+}
+
+.catalog-link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catalog-link {
+  font: 500 15px/30px Montserrat;
+  color: white;
+  text-decoration: none;
+  padding: 0 9px;
+  display: block;
+  background-color: #00918a;
+  width: fit-content;
+}
+
+.catalog-link:hover {
+  background-color: white;
+  color: #00918a;
+}
+
+.activ {
+  border-bottom: solid 1px white;
+}
+
+.catalog-list {
+  position: absolute;
+  background-color: #ffffffda;
+  padding: 10px;
+  margin: 0;
+  top: 90px;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  left: 0;
+  right: 0;
+  max-width: 1380px;
+  margin: auto;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.navigation-item:hover {
+  border-bottom: solid 1px white;
+}
+
+.navigation-item:focus-visible {
+  background-color: black;
+}
+
+.navigation-item:active {
+  color: rgb(183, 221, 215);
+}
+
+.catalog-wrapper:focus-within .hidden {
+  display: grid;
+}
+
+ .head-addres {
   color: white;
   font: 400 15px/30px Montserrat;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
- }
-  
- .logo span {
-  color: white;
-  font: 900 66px/66px Nunito;
  }
 
 .tel,
@@ -110,11 +217,10 @@
 .hiro h1 {
   color: white;
   font: 100 35px/50px Montserrat;
-  padding: 111px 0 50px 50px;
-}
-
-header {
-
+  margin: 0 auto;
+  padding: 137px 2rem 80px;
+  max-width: 1380px;
+  width: 100%;
 }
 
  h1 {
@@ -123,8 +229,13 @@ header {
  }
 
  .main {
-  width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1380px;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  min-height: 400px;
  }
 
  .section {
@@ -201,7 +312,7 @@ position: relative;
   overflow: hidden;
   position: relative;
   border: solid 2px rgb(255, 255, 255);
- }
+   }
 
  details[open] {
   grid-column: 1 / -1;
@@ -364,4 +475,38 @@ tbody tr:hover {
  footer {
   background-color: #00918a;
   height: 100px;  
+  flex-shrink: 0;
+ }
+ 
+ .footer-wrap {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1380px;
+  width: 100%;
+ }
+
+ .footer-wrap address { 
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ /*  стр с контактами  */
+
+ .contact-adress {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 1;
+  color: #00918a;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  padding: 22px;
  }
