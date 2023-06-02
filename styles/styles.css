@@ -5,6 +5,7 @@
   outline: solid 1px red;
 } */
 
+
 * {
   box-sizing: border-box;
 }
@@ -92,7 +93,7 @@
   align-items: center;
   background-color: rgba(0, 145, 138, 0.9);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   max-width: 1380px;
   width: 100%;
  }
@@ -117,7 +118,7 @@
 .navigation-item {
   font: 400 15px/30px Montserrat;
   background-color: transparent;
-  padding: 8px 16px;
+  padding: 0 16px;
   text-decoration: none;
   color: white;
   border: solid 1px #00918a00;
@@ -126,8 +127,13 @@
 
 .catalog-item {
   list-style-type: none;
-  margin-bottom: 20px;
-  font: 400 13px/30px Montserrat;
+  font: 400 13px/15px Montserrat;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.catalog-item:last-child .catalog-link-group {
+  justify-content: flex-end;
 }
 
 .catalog-link-group {
@@ -144,6 +150,7 @@
   display: block;
   background-color: #00918a;
   width: fit-content;
+  margin-top: 5px;
 }
 
 .catalog-link:hover {
@@ -158,16 +165,18 @@
 .catalog-list {
   position: absolute;
   background-color: #ffffffda;
-  padding: 10px;
+  padding: 0 10px;
   margin: 0;
-  top: 90px;
+  top: 110px;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   left: 0;
   right: 0;
   max-width: 1380px;
   margin: auto;
-
-  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 413%;
+  gap: 0 10px;
 }
 
 .navigation-item:hover {
@@ -183,21 +192,36 @@
 }
 
 .catalog-wrapper:focus-within .hidden {
-  display: grid;
+  display: flex;
 }
 
  .head-addres {
   color: white;
-  font: 400 15px/30px Montserrat;
+  font: 400 15px/26px Montserrat;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
  }
 
 .tel,
 .mail {
   color: white;
   text-decoration: none;
+  position: relative;
+  padding-left: 26px;
+}
+
+.tel {
+  background-image: url(../images/tlfn.svg);
+  background-repeat: no-repeat;
+  background-position: center left 0px;
+  background-size: 17px;
+}
+
+.mail {
+  background-image: url(../images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: center left 0px;
+  background-size: 17px;
 }
 
 .tel:hover,
@@ -272,6 +296,18 @@
 
 .section:nth-child(8) .section-description-wrap {
   background-image: url(../images/8.jpg);
+}
+
+.section:nth-child(9) .section-description-wrap {
+  background-image: url(../images/9.jpg);
+}
+
+.section:nth-child(10) .section-description-wrap {
+  background-image: url(../images/10.jpg);
+}
+
+.section:nth-child(11) .section-description-wrap {
+  background-image: url(../images/11.jpg);
 }
 
  .section-description-wrap {
@@ -404,7 +440,6 @@ list-style: none;
 flex: 2;
  }
 
-
  .advantages span {
   color: #00918a;
   font-size: 18px;
@@ -476,6 +511,7 @@ tbody tr:hover {
   background-color: #00918a;
   height: 100px;  
   flex-shrink: 0;
+  padding-top: 40px;
  }
  
  .footer-wrap {
@@ -490,23 +526,39 @@ tbody tr:hover {
   flex-direction: initial;
   justify-content: space-between;
   align-items: center;
+  font: 400 15px/26px Montserrat;
  }
+
+ .address {
+ background-image: url(../images/poz.svg);
+ background-repeat: no-repeat;
+ background-position: center left 0px;
+ background-size: 17px;
+ color: white;
+ text-decoration: none;
+ position: relative;
+ padding-left: 26px;
+}
 
  /*  стр с контактами  */
 
  .contact-adress {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #00918adb;
   position: absolute;
   z-index: 1;
-  color: #00918a;
   top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 50%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   margin-left: 2%;
   padding: 22px;
+  font: 500 17px/51px Montserrat;  
+ }
+
+ .contact-adress a {
+  background-size: 25px;
+  padding-left: 40px;
  }
