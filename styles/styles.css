@@ -1,9 +1,9 @@
-/*
-*,
+/* 
 *:before,
 *:after {
   outline: solid 1px red;
-} */
+}*/
+*,
 
 
 * {
@@ -129,7 +129,7 @@
   list-style-type: none;
   font: 400 13px/15px Montserrat;
   width: 50%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .catalog-item:last-child .catalog-link-group {
@@ -139,7 +139,7 @@
 .catalog-link-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0 3px;
 }
 
 .catalog-link {
@@ -150,7 +150,7 @@
   display: block;
   background-color: #00918a;
   width: fit-content;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .catalog-link:hover {
@@ -175,7 +175,7 @@
   margin: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 413%;
+  height: 440%;
   gap: 0 10px;
 }
 
@@ -267,35 +267,35 @@
 }
 
 .section:nth-child(1) .section-description-wrap {
-  background-image: url(../images/1.jpg);
+  background-image: url(../images/8.jpg);
 }
 
 .section:nth-child(2) .section-description-wrap {
-  background-image: url(../images/2.jpg);
+  background-image: url(../images/1.jpg);
 }
 
 .section:nth-child(3) .section-description-wrap {
-  background-image: url(../images/3.jpg);
+  background-image: url(../images/2.jpg);
 }
 
 .section:nth-child(4) .section-description-wrap {
-  background-image: url(../images/4.jpg);
+  background-image: url(../images/3.jpg);
 }
 
 .section:nth-child(5) .section-description-wrap {
-  background-image: url(../images/5.jpg);
+  background-image: url(../images/4.jpg);
 }
 
 .section:nth-child(6) .section-description-wrap {
-  background-image: url(../images/6.jpg);
+  background-image: url(../images/5.jpg);
 }
 
 .section:nth-child(7) .section-description-wrap {
-  background-image: url(../images/7.jpg);
+  background-image: url(../images/6.jpg);
 }
 
 .section:nth-child(8) .section-description-wrap {
-  background-image: url(../images/8.jpg);
+  background-image: url(../images/7.jpg);
 }
 
 .section:nth-child(9) .section-description-wrap {
@@ -414,6 +414,7 @@ position: relative;
  .advantages {
   flex: 1;
   cursor: default;
+  width: 100%;
  }
 
  .advantages-list {
@@ -436,9 +437,9 @@ list-style: none;
   color: #00918a;
   } 
 
- .grease-description table {
-flex: 2;
- }
+.table-wrap {
+  flex: 2;
+}
 
  .advantages span {
   color: #00918a;
@@ -465,6 +466,7 @@ table {
   border-collapse: collapse;
   color: #000000;
   cursor: default;
+  width: 100%;
 }
 
 caption {
@@ -509,9 +511,8 @@ tbody tr:hover {
 
  footer {
   background-color: #00918a;
-  height: 100px;  
   flex-shrink: 0;
-  padding-top: 40px;
+  padding: 20px 0;
  }
  
  .footer-wrap {
@@ -526,7 +527,7 @@ tbody tr:hover {
   flex-direction: initial;
   justify-content: space-between;
   align-items: center;
-  font: 400 15px/26px Montserrat;
+  font: 400 15px/19px Montserrat;
  }
 
  .address {
@@ -555,10 +556,132 @@ tbody tr:hover {
   flex-direction: column;
   margin-left: 2%;
   padding: 22px;
-  font: 500 17px/51px Montserrat;  
+  font: 500 17px/30px Montserrat;
  }
 
  .contact-adress a {
   background-size: 25px;
-  padding-left: 40px;
+  padding: 5px 0 5px 40px;
  }
+
+ .contact-adress a:not(:last-child) {
+  margin-bottom: 10px;
+ }
+
+ @media (max-width: 1200px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .footer-wrap address {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .product-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grease-description {
+    flex-direction: column;
+  }
+
+  .contact-adress {
+    width: 50%;
+  }
+
+  .catalog-list {
+    top: 127px;
+    height: 442%;
+  }
+}
+
+@media (max-width: 820px) {
+
+.navigation > a {
+  display: none;
+}
+
+.head-addres {
+  display: none;
+}
+
+.product-wrap {
+  grid-template-columns: 1fr;
+}
+
+.main {
+  padding: 0 0.5rem;
+}
+
+.section-description {
+  font: 430 24px/30px Montserrat;
+}
+
+.header-fix {
+  padding: 1rem 1rem;
+}
+
+.logo {
+  font: 900 35px/36px Nunito;
+}
+
+.hiro h1 {
+  font: 420 28px/30px Montserrat;
+  padding: 124px 1rem 64px;
+}
+
+.hiro {
+  background-size: 500px;
+}
+
+.section-description-wrap {
+  padding: 170px 0 0;
+}
+
+.grease-title h3 {
+  font: 600 16px / 16px Montserrat;
+  margin-bottom: 0;
+}
+
+.grease-title {
+  font: 500 14px/19px Montserrat;
+}
+
+body {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+details {
+  max-height: 232px;
+}
+
+.catalog-list {
+  top: 66px;
+  height: 80vh;
+  overflow-x: scroll;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.catalog-item {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .table-wrap {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .contact-adress {
+
+    width: 100%;
+    margin: 0;
+    font: 500 17px/26px Montserrat;
+  }
+
+
+}
