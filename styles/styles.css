@@ -1,9 +1,9 @@
 /* 
+*,
 *:before,
 *:after {
   outline: solid 1px red;
 }*/
-*,
 
 
 * {
@@ -111,9 +111,6 @@
   flex-wrap: wrap;
 }
 
-.catalog-wrapper {
-
-}
 
 .navigation-item {
   font: 400 15px/30px Montserrat;
@@ -200,6 +197,7 @@
   font: 400 15px/26px Montserrat;
   display: flex;
   flex-direction: column;
+  position: relative;
  }
 
 .tel,
@@ -222,6 +220,20 @@
   background-repeat: no-repeat;
   background-position: center left 0px;
   background-size: 17px;
+}
+
+.whatsapp {
+  position: absolute;
+  width: 50px;
+  height: 22px;
+  display: block;
+  background: transparent url(../images/wag.svg) center top no-repeat;
+  left: -46px;
+  top: 31px;
+}
+
+.whatsapp:hover {
+  background: transparent url(../images/waw.svg) center top no-repeat;
 }
 
 .tel:hover,
@@ -528,6 +540,7 @@ tbody tr:hover {
   justify-content: space-between;
   align-items: center;
   font: 400 15px/19px Montserrat;
+  position: relative;
  }
 
  .address {
@@ -539,6 +552,19 @@ tbody tr:hover {
  text-decoration: none;
  position: relative;
  padding-left: 26px;
+}
+
+.footer-tel-wrap {
+  display: flex;
+}
+
+.whatsapp-footer {
+  width: 35px;
+  background: url(../images/wag.svg) center top no-repeat;
+}
+
+.whatsapp-footer:hover {
+  background: url(../images/waw.svg) center top no-repeat;
 }
 
  /*  стр с контактами  */
@@ -565,6 +591,10 @@ tbody tr:hover {
  }
 
  .contact-adress a:not(:last-child) {
+  margin-bottom: 10px;
+ }
+
+ .contact-adress .contact-adres-wrap {
   margin-bottom: 10px;
  }
 
